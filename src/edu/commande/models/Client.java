@@ -15,7 +15,7 @@ public class Client {
 	this.id = id;
     }
 
-    public Client(String) {
-
+    public Client(String id) {
+	return this.id;
     }
 }
