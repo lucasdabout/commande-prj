@@ -18,6 +18,6 @@ public class commandeSpeciale {
     public void Commandespeciale(Client client, float promo) {
     }
 
-    public static getMontant(float promo) {
+    public void getMontant(float promo) {
     }
 }
