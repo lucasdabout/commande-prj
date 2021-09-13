@@ -17,12 +17,14 @@ public class Commande {
 	this.date = date;
     }
 
-    public Commande(Client) {
+    public Commande(Client client) {
     }
 
-    public addProduit(Produit, int) {
+    public void addProduit(Produit patate, int quantite) {
+
     }
 
-    public getMontant(float) {
+    public void getMontant(float pu) {
+
     }
 }

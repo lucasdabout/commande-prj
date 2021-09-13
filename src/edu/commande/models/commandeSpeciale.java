@@ -15,9 +15,9 @@ public class commandeSpeciale {
 	this.promo = promo;
     }
 
-    public Commandespeciale(Client, float) {
+    public void Commandespeciale(Client client, float promo) {
     }
 
-    public getMontant(float) {
+    public static getMontant(float promo) {
     }
 }

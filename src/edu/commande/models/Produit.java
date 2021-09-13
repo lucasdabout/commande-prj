@@ -25,9 +25,9 @@ public class Produit {
 	this.pu = pu;
     }
 
-    public Produit(Strinf, float) {
+    public void Produit(String ref, float pu) {
     }
 
-    public getPu(float) {
+    public static getPu(float pu) {
     }
 }
