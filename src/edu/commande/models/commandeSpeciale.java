@@ -1,23 +1,17 @@
 package edu.commande.models;
 
-public class commandeSpeciale {
+public class commandeSpeciale extends Commande {
     private float promo;
 
-    public commandeSpeciale(float promo) {
+    ////////////// CONSTRUCTEUR QUI HERITE DE LA CLASSE COMMANDE //////////////
+    public commandeSpeciale(Client leClient, float promo) {
+	super(leClient);
 	this.promo = promo;
     }
 
-    public float getPromo() {
-	return promo;
-    }
-
-    public void setPromo(float promo) {
-	this.promo = promo;
-    }
-
-    public void Commandespeciale(Client client, float promo) {
-    }
-
-    public void getMontant(float promo) {
+    ////////////// SURCHARGE //////////////
+    @Override
+    public float getMontant() {
+	return super.getMontant() * (1 - this.promo);
     }
 }
