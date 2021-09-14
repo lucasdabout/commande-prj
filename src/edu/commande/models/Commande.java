@@ -1,24 +1,28 @@
 package edu.commande.models;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Commande {
     private Date date;
     private Client leClient; // Client -> classe alors que leClient -> instance de la classe Client
-    private List<detailCommande> listeDetails;
+    private Map<String, detailCommande> listeDetails;
 
     ////////////// CONSTRUCTEUR //////////////
     public Commande(Client leClient) {
 	this.leClient = leClient;
-	listeDetails = new ArrayList<>();
+	listeDetails = new HashMap<>();
 	date = new Date();
     }
 
     ////////////// MÉTHODES //////////////
     public void addProduit(Produit produit, int quantite) {
-	this.listeDetails.add(new detailCommande(produit, quantite));
+	if (listeDetails.containsKey(produit.getRef())) {
+	    incProduit(produit.getRef(), quantite);
+	} else {
+	    this.listeDetails.put(produit.getRef(), new detailCommande(produit, quantite));
+	}
     }
 
     public void incProduit(String ref, int quantite) {

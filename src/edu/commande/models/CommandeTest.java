@@ -69,4 +69,15 @@ class CommandeTest {
 	assertEquals(3, laCommande.getQuantiteProduits());
 
     }
+
+    @Test
+    void testAddProduit() {
+	assertEquals(0, laCommande.getMontant(), 0);
+	laCommande.addProduit(new Produit("Fromage de brebis", 2.0f), 2);
+	assertEquals(2, laCommande.getQuantiteProduits());
+
+	laCommande.addProduit(new Produit("Fromage de brebis", 2.0f), 2);
+	assertEquals(4, laCommande.getQuantiteProduits());
+	assertEquals(1, laCommande.getListeDetails().size());
+    }
 }

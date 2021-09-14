@@ -42,7 +42,7 @@ public class detailCommande {
 	return new detailCommande(new Produit(ref, 0), 0);
     }
 
-    public void incQuantite(int quantite2) {
+    public void incQuantite(int quantite) {
 	this.quantite += quantite;
 
     }
